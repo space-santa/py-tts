@@ -1,1 +1,1 @@
-*/15 * * * * /home/pi/TemperatureTrackerService/start.sh
+*/15 * * * * /home/pi/py-tts/start.sh
