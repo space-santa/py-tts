@@ -1,3 +1,5 @@
 #!/bin/bash
-source env/bin/activate
-python main.py
+DIR=`dirname "$(readlink -f "$0")"`
+echo $DIR
+source $DIR/env/bin/activate
+python $DIR/src/main.py
