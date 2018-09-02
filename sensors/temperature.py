@@ -1,4 +1,8 @@
-try:
+import settings
+
+if settings.DEVICE == settings.BME280:
     from .bme280 import get_temperature
-except ModuleNotFoundError as e:
+elif settings.DEVICE == settings.SenseHat:
+    from .mock import get_temperature
+else:
     from .mock import get_temperature
