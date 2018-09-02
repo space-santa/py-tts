@@ -1,3 +1,4 @@
 from sensors import temperature
+from output import writer
 
-print(temperature.get_temperature())
+writer.write(temperature.get_temperature())
