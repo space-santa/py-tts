@@ -25,3 +25,9 @@ pip3 install adafruit-blinka
 pip3 install adafruit-circuitpython-bme280
 
 ```
+
+## SenseHat
+
+```
+sudo apt-get install sense-hat
+```
