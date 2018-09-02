@@ -1,4 +1,11 @@
 # TemperatureTrackerService
+## Getting started
+```
+cp .env.example src/.env
+# Edit .env appropriately
+virualenv -p python3 env
+start.sh
+```
 ## BME280
 Install the [requirements](https://learn.adafruit.com/circuitpython-on-raspberrypi-linux/installing-circuitpython-on-raspberry-pi)
 and the [driver](https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/python-circuitpython-test).
