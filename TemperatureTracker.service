@@ -1,0 +1,15 @@
+[Unit]
+Description=Temperature Tracker service
+After=syslog.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/TemperatureTrackerService/
+ExecStart=/home/pi/TemperatureTrackerService/start.sh
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
