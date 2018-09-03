@@ -20,14 +20,24 @@ sudo raspi-config
 # check that they are enabled
 ls /dev/i2c* /dev/spi*
 # returns /dev/i2c-1 /dev/spidev0.0 /dev/spidev0.1
-pip3 install RPI.GPIO
-pip3 install adafruit-blinka
-pip3 install adafruit-circuitpython-bme280
-
+sudo pip3 install virtualenv
+cd project/root
+virtualenv -p python3 env
+source env/bin/activate
+pip install -r requirements.txt
+pip install RPI.GPIO
+pip install adafruit-blinka
+pip install adafruit-circuitpython-bme280
 ```
 
 ## SenseHat
 
 ```
+sudo apt-get install python3-pip
+sudo pip3 install virtualenv
 sudo apt-get install sense-hat
+cd project/root
+virtualenv -p python3 --system-site-packages env
+source env/bin/activate
+pip install -r requirements.txt
 ```
