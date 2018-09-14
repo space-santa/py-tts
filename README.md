@@ -41,3 +41,16 @@ virtualenv -p python3 --system-site-packages env
 source env/bin/activate
 pip install -r requirements.txt
 ```
+
+## DS18B20
+
+```
+# If it is not already there...
+sudo echo "dtoverlay=w1–gpio" >> /boot/config.txt
+sudo reboot
+sudo apt-get install python3-pip
+sudo pip3 install virtualenv
+virtualenv -p python3 env
+source env/bin/activate
+pip install -r requirements.txt
+```
