@@ -1,7 +1,9 @@
 from dotenv import load_dotenv
+
 load_dotenv()
 
 import os
+
 DEVICE = os.getenv("DEVICE", default="Mock")
 WRITER = os.getenv("WRITER", default="CONSOLE")
 API_URL = os.getenv("API_URL", default="")
