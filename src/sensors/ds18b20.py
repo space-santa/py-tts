@@ -1,5 +1,5 @@
-import os
 import glob
+import os
 import time
 
 os.system("modprobe w1-gpio")

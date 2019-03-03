@@ -1,7 +1,9 @@
-import requests
-import settings
 import json
 from datetime import datetime, timezone
+
+import requests
+
+import settings
 
 
 def write(temperature):

@@ -1,6 +1,6 @@
+import adafruit_bme280
 import board
 import busio
-import adafruit_bme280
 
 
 def get_temperature():
