@@ -9,6 +9,8 @@ DEVICE = os.getenv("DEVICE", default="Mock")
 WRITER = os.getenv("WRITER", default="CONSOLE")
 API_URL = os.getenv("API_URL", default="")
 NAME = os.getenv("NAME", default="")
+LOCATION = os.getenv("LOCATION", default="")
+PASSWORD = os.getenv("PASSWORD", default="")
 
 BME280 = "BME280"
 MOCK = "Mock"
