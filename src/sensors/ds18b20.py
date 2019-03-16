@@ -5,14 +5,14 @@ import time
 os.system("modprobe w1-gpio")
 os.system("modprobe w1-therm")
 
-base_dir = "/sys/bus/w1/devices/"
-device_folder = glob.glob(base_dir + "28*")[0]
-device_file = device_folder + "/w1_slave"
+BASE_DIR = "/sys/bus/w1/devices/"
+DEVICE_FOLDER = glob.glob(BASE_DIR + "28*")[0]
+DEVICE_FILE = DEVICE_FOLDER + "/w1_slave"
 
 
 def read_temp_raw():
-    with open(device_file, "r") as f:
-        lines = f.readlines()
+    with open(DEVICE_FILE, "r") as file:
+        lines = file.readlines()
         return lines
 
 

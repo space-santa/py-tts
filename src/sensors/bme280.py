@@ -1,6 +1,9 @@
+# pylint:disable=import-error
 import adafruit_bme280
 import board
 import busio
+
+# pylint:enable=import-error
 
 
 def get_temperature():

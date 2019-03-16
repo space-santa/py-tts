@@ -1,4 +1,4 @@
-from sense_hat import SenseHat
+from sense_hat import SenseHat  # pylint: disable=import-error
 
 
 def get_temperature():

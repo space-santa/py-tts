@@ -14,7 +14,7 @@ PASSWORD = os.getenv("PASSWORD", default="")
 
 BME280 = "BME280"
 MOCK = "Mock"
-SenseHat = "SenseHat"
+SENSE_HAT = "SenseHat"
 DS18B20 = "DS18B20"
 
 CONSOLE = "CONSOLE"
