@@ -6,3 +6,4 @@ pylint==2.3.1
 
 # actual stuff
 requests==2.21.0
+python-dotenv==0.10.1
