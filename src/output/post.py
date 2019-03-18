@@ -12,7 +12,7 @@ class PostRequestHandlerException(Exception):
 
 
 class PostRequestHandler:
-    LOGIN_URL = f"{settings.BASE_URL}Identity/Account/Login"
+    LOGIN_URL = settings.BASE_URL + "Identity/Account/Login"
 
     def __init__(self):
         self.session = requests.Session()
@@ -32,15 +32,15 @@ class PostRequestHandler:
         }
         reply = self.session.post(self.LOGIN_URL, data=payload)
         if reply.status_code != 200:
-            raise PostRequestHandlerException(f"Couldn't log in: {reply.text}")
+            raise PostRequestHandlerException("Couldn't log in: " + reply.text)
 
     def post_request(self, data, endpoint):
         headers = {"Content-type": "application/json", "Accept": "text/plain"}
         reply = self.session.post(
-            f"{settings.API_URL}{endpoint}/", data=json.dumps(data), headers=headers
+            settings.API_URL + endpoint + "/", data=json.dumps(data), headers=headers
         )
         if reply.status_code != 201:
-            raise PostRequestHandlerException(f"Couldn't post request: {reply.text}")
+            raise PostRequestHandlerException("Couldn't post request: " + reply.text)
         return reply
 
 
@@ -55,7 +55,7 @@ def write(temperature):
 
 
 def _get_device_id():
-    response = requests.get(f"{settings.API_URL}device/")
+    response = requests.get(settings.API_URL + "device/")
     for device in response.json():
         if device["name"] == settings.NAME:
             return device["id"]

@@ -8,7 +8,7 @@ load_dotenv()
 DEVICE = os.getenv("DEVICE", default="Mock")
 WRITER = os.getenv("WRITER", default="CONSOLE")
 BASE_URL = os.getenv("BASE_URL", default="")
-API_URL = f"{BASE_URL}api/"
+API_URL = BASE_URL + "api/"
 NAME = os.getenv("NAME", default="")
 LOCATION = os.getenv("LOCATION", default="")
 PASSWORD = os.getenv("PASSWORD", default="")
