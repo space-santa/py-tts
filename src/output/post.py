@@ -45,10 +45,11 @@ class PostRequestHandler:
 
 
 def write(temperature):
+    timestamp = datetime.now(timezone.utc)
     data = {
         "temperature": temperature,
         "deviceid": _get_or_create_device_id(),
-        "timestamp": str(datetime.now(timezone.utc).astimezone()),
+        "timestamp": timestamp.strftime("%Y-%m-%dT%H:%M:%S"),
     }
     handler = PostRequestHandler()
     handler.post_request(data, "temperature")
